@@ -33,11 +33,12 @@ public class Vaccine extends Appointment implements Payable {
             String subjectFirstName,
             String subjectLastName,
             int subjectAge,
+            String subjectSocialSecurityNumber,
             LocalDateTime dateTime,
             VaccineType type,
             @Nullable LocalDateTime nextInjectionDateTime
     ) {
-        super(subjectFirstName, subjectLastName, subjectAge, dateTime);
+        super(subjectFirstName, subjectLastName, subjectAge, subjectSocialSecurityNumber, dateTime);
         this.nextInjectionDateTime = nextInjectionDateTime;
         this.type = type;
     }

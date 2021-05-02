@@ -15,6 +15,8 @@ public abstract class Appointment {
     private String subjectLastName;
     @JsonView(VaccineViews.DetailView.class)
     private int subjectAge;
+    @JsonView(VaccineViews.DetailView.class)
+    private String subjectSocialSecurityNumber;
 
     // Date & time
     @JsonView(VaccineViews.MinimalView.class)
@@ -22,11 +24,18 @@ public abstract class Appointment {
 
     public Appointment() { }
 
-    public Appointment(String subjectFirstName, String subjectLastName, int subjectAge, LocalDateTime dateTime) {
+    public Appointment(
+            String subjectFirstName,
+            String subjectLastName,
+            int subjectAge,
+            String subjectSocialSecurityNumber,
+            LocalDateTime dateTime
+    ) {
         this.subjectFirstName = subjectFirstName;
         this.subjectLastName = subjectLastName;
         this.subjectAge = subjectAge;
         this.dateTime = dateTime;
+        this.subjectSocialSecurityNumber = subjectSocialSecurityNumber;
     }
 
     public String getSubjectFirstName() {
@@ -43,5 +52,9 @@ public abstract class Appointment {
 
     public LocalDateTime getDateTime() {
         return dateTime;
+    }
+
+    public String getSubjectSocialSecurityNumber() {
+        return subjectSocialSecurityNumber;
     }
 }

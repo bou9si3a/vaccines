@@ -54,28 +54,28 @@ public class BootStrapData implements CommandLineRunner {
                 LocalTime.of(9, 30, 0, 0)
         );
         Vaccine vaccine1 = new Vaccine(
-                "firstName1", "lastName1", 63, localDateTime1, VaccineType.Moderna, localDateTime5
+                "Anna", "lastName1", 63, "1234", localDateTime1, VaccineType.Moderna, localDateTime5
         );
         Vaccine vaccine2 = new Vaccine(
-                "firstName2", "lastName2", 72, localDateTime2, VaccineType.Pfizer, localDateTime6
+                "firstName2", "lastName2", 72, "5423", localDateTime2, VaccineType.Pfizer, localDateTime6
         );
         Vaccine vaccine3 = new Vaccine(
-                "firstName3", "lastName3", 58, localDateTime3, VaccineType.Astrazeneca, localDateTime7
+                "firstName3", "lastName3", 58, "1123", localDateTime3, VaccineType.Astrazeneca, localDateTime7
         );
         Vaccine vaccine4 = new Vaccine(
-                "firstName4", "lastName4", 49, localDateTime4, VaccineType.Moderna, localDateTime8
+                "firstName4", "lastName4", 49, "7777", localDateTime4, VaccineType.Moderna, localDateTime8
         );
         Vaccine vaccine5 = new Vaccine(
-                "firstName5", "lastName5", 88, localDateTime5, VaccineType.Pfizer, null
+                "firstName5", "Bob", 88, "9190", localDateTime5, VaccineType.Pfizer, null
         );
         Vaccine vaccine6 = new Vaccine(
-                "firstName6", "lastName6", 59, localDateTime6, VaccineType.Astrazeneca, null
+                "firstName6", "lastName6", 59, "8228", localDateTime6, VaccineType.Astrazeneca, null
         );
         Vaccine vaccine7 = new Vaccine(
-                "firstName7", "lastName7", 61, localDateTime7, VaccineType.Astrazeneca, null
+                "firstName7", "lastName7", 61, "9891", localDateTime7, VaccineType.Astrazeneca, null
         );
         Vaccine vaccine8 = new Vaccine(
-                "firstName8", "lastName8", 77, localDateTime8, VaccineType.Moderna, null
+                "firstName8", "lastName8", 77, "3205", localDateTime8, VaccineType.Moderna, null
         );
         vaccineRepository.save(vaccine1);
         vaccineRepository.save(vaccine2);
