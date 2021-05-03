@@ -35,7 +35,7 @@ public class VaccineController {
         List<Vaccine> results = getVaccines();
         return results
                 .stream()
-                .filter(vaccine -> vaccine.getSubjectFirstName() == name || vaccine.getSubjectLastName() == name)
+                .filter(vaccine -> vaccine.getSubjectFirstName().equals(name) || vaccine.getSubjectLastName().equals(name))
                 .collect(Collectors.toList());
     }
 
