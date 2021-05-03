@@ -50,7 +50,7 @@ public class VaccineController {
     }
 
     @GetMapping("/vaccines/ssnDivisibleBy")
-    public List<Vaccine> getSsnDivisibleBy() {
+    public List<Vaccine> getSsnDivisibleBy(@RequestParam(name = "ssnDivBy") Integer number) {
         List<Vaccine> results = getVaccines();
         return results
                 .stream()

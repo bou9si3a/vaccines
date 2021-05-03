@@ -51,8 +51,12 @@ public class Vaccine extends Appointment implements Payable {
     }
 
     @JsonView(VaccineViews.MinimalView.class)
-    @Override
     public boolean isFinalInjection() {
         return nextInjectionDateTime == null;
+    }
+
+    @Override
+    public int getCost() {
+        return type.getCost();
     }
 }
