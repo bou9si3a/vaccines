@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface VaccineRepository extends CrudRepository<Vaccine, Long> {
 
-    @Query("SELECT v FROM Vaccine v HAVING v.subjectAge > :age")
+    @Query("SELECT v FROM Vaccine v WHERE v.subjectAge > :age")
     List<Vaccine> findPatientsOlderThan(@Param("age") int age);
 
-    @Query("SELECT v FROM Vaccine v WHERE v.subjectSocialSecurityNumber %:substring%")
+    @Query("SELECT v FROM Vaccine v WHERE v.subjectSocialSecurityNumber LIKE %:substring%")
     List<Vaccine> findSsnContains(@Param("substring") String substring);
 }
