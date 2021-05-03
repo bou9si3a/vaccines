@@ -35,7 +35,7 @@ public class VaccineController {
         List<Vaccine> results = getVaccines();
         return results
                 .stream()
-                .filter(vaccine -> vaccine.getSubjectFirstName().equals(name) || vaccine.getSubjectLastName().equals(name))
+                .filter(vaccine -> vaccine.getSubjectFirstName() == name || vaccine.getSubjectLastName() == name)
                 .collect(Collectors.toList());
     }
 
@@ -50,7 +50,7 @@ public class VaccineController {
     }
 
     @GetMapping("/vaccines/ssnDivisibleBy")
-    public List<Vaccine> getSsnDivisibleBy(@RequestParam(name = "ssnDivBy") Integer number) {
+    public List<Vaccine> getSsnDivisibleBy() {
         List<Vaccine> results = getVaccines();
         return results
                 .stream()

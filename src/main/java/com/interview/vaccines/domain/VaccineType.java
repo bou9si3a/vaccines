@@ -11,7 +11,7 @@ public enum VaccineType {
         this.cost = cost;
     }
 
-    public int getCost() {
+    private int getCost() {
         return cost;
     }
 }

@@ -1,6 +1,5 @@
 package com.interview.vaccines.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.interview.vaccines.views.VaccineViews;
@@ -51,13 +50,8 @@ public class Vaccine extends Appointment implements Payable {
         return type;
     }
 
-    @JsonIgnore
-    @Override
-    public int getCost() {
-        return type.getCost();
-    }
-
     @JsonView(VaccineViews.MinimalView.class)
+    @Override
     public boolean isFinalInjection() {
         return nextInjectionDateTime == null;
     }
